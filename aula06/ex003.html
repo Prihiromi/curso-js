@@ -19,17 +19,21 @@
     <h1>Olá, Mundo!</h1> <!-- Isso é um ccomentário em HTML -->
     <p>Já me livrei da maldição!</p>
     <script>
-        var n1 = Number(window.prompt('Digite um número: ')) // prompt sempre retorna uma string, Number.parseInt converte essa var string em number
+        var n1 = Number(window.prompt('Digite um número: ')) // prompt sempre retorna uma string, necessário converter essa var string em number
         
         // Number.parseInt(n) para Inteiro
         // Number.parseFloat(n) para Real
         // Number(n) o JS vai decidir se é Real ou Inteiro
 
+        // String(n) ou n.toString() converte Number para String
+
         var n2 = Number(window.prompt('Digite outro número: '))
-        var s = n1 + n2 // converter as variaveis para number
-        window.alert('A soma dos valores é ' + s)
+        var s = n1 + n2
+        window.alert(`A soma entre ${n1} e ${n2} é igual a ${s}.`)   // Template String usa crase e o placeholder ${} ao invés de concatenar
+
         // (number + number) para adição
         // (string + string) para concatenação
+        
     </script>
 </body>
 </html>
