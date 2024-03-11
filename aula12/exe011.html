@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tribunal Eleitoral Brasil</title>
+</head>
+<body>
+    <h1>Sistema de votação</h1>
+    Insira a sua idade <input type="number" name="txti" id="txti"> anos.
+    <input type="button" value="Verificar" onclick="verificar()">
+    <div id="res">
+
+    </div>
+    <script>
+        function verificar() {
+            var txi = window.document.querySelector('input#txti')
+            var idade = Number(txi.value)
+            var res = window.document.querySelector('div#res')
+
+            if (idade < 16) {
+                res.innerHTML = ('Não vota')
+            } else if (idade <= 18 || idade > 65){
+                res.innerHTML = ('Voto opcional')    
+            } else {
+                res.innerHTML = ('Voto obrigatório')
+            }
+        }
+    </script>
+</body>
+</html>
